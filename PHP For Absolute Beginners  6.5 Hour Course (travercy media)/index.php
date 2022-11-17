@@ -56,14 +56,14 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     <tr>
       <th scope="row"><?php echo $i +1 ?></th>
-      <td></td>
+      <td><img src="<?php echo $product['image']?>" alt="" class="thumb-image"></td>
       <td><?php echo $product['title'] ?></td>
       <td><?php echo $product['price'] ?></td>
       <td><?php echo $product['create_date'] ?></td>
       <td>
 
       <button type="button" class="btn btn-sm btn-primary">Edit</button>
-      <button type="button" class="btn btn-sm btn-danger">Delete</button>
+      <a href="delete.php?id=<?php echo $product['id'] ?>" type="button" class="btn btn-sm btn-danger">Delete</button>
 
       </td>
 
